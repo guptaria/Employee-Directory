@@ -1,8 +1,8 @@
 import React from 'react';
-function Header(){
+function Header(props) {
     return(
 <div class="page-header">
-  <h1>Employee Directory</h1>
+  <h1>{props.children}</h1>
 </div>
     )
 };
