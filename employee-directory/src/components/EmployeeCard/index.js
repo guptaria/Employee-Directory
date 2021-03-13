@@ -3,19 +3,21 @@ import "./style.css";
 function EmployeeCard(props){
     return(
 <div className="card">
-    <div className="img-container">
-        {props.image}
+    <div  className="img-container">
+        <img src= {props.image} />
+    
+        
     </div>
     <div className="body">
         <ul> 
             <li> 
-                <strong>Name</strong>{props.name}
+                <strong>Name: </strong>{props.name}
             </li>
             <li> 
-                <strong>Email</strong>{props.email}
+                <strong>Email: </strong>{props.email}
             </li>
             <li> 
-                <strong>Contact Number</strong>{props.contact}
+                <strong>Contact Number: </strong>{props.contact}
             </li>
         </ul>
     </div>
