@@ -17,7 +17,7 @@
     background:lightskyblue;
   }
   .card > .img-container > img {
-    width: 60%
+    width: 80%
   }
   
   .card > .body {
@@ -31,5 +31,5 @@
   }
   
   .card > .body > ul > li {
-    margin-top: 18px;
+    margin-top: 5px;
   }

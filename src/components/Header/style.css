@@ -1,13 +1,18 @@
-.page-header {
-    width: 40;
-    text-align: center;
-    font-size: "100px";
-    /* text-decoration: underline; */
-    color: black;
-    margin-bottom: 5px;
-    /* background-color:blue; */
-    /* background-image: url("./employee.jpeg"); */
-    height:70px;
-    background-color: white;
-  }
+.container {
+  width: 70%;
+  text-align: center;
+  font-size: "100px";
+  /* text-decoration: underline; */
+  color: white;
+  margin-bottom: 5px;
+  /* background-color:blue; */
+  /* background-image: url("./employee.jpeg"); */
+  height:150px;
+  background-color: black;
+  /* position:fixed; */
+  /* position:sticky; */
+}
   
+ 
+ 
+
