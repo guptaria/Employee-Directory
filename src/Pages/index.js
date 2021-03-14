@@ -12,6 +12,8 @@ function Pages() {
   const [employeeState, setEmployeeState] = useState([]);
   const [tempSearch, setTempSearch] = useState();
   const [manipulateState, setManipulateState] = useState([]);
+  const [sortState, setSortState] = useState(false);
+
 
   useEffect(() => {
     // if (employeeState.results.length === 0) {
@@ -57,6 +59,13 @@ function Pages() {
 
   const handleSortByName = event => {
     console.log("handleSortByNmae");
+    if (!sortState) {
+      setEmployeeState(employeeState.sort((a, b) => (a.name > b.name) ? 1 : -1));
+      setSortState(true);
+  } else {
+    setEmployeeState(employeeState.sort((a, b) => (a.name > b.name) ? -1 : 1));
+      setSortState(false);
+  }
   };
 
   const handleSortByAge = event => {
@@ -98,8 +107,7 @@ function Pages() {
         handleSortByName={handleSortByName}
         handleSortByAge={handleSortByAge}
       />
-      {/* handleSubmitPlaceHolder={handleFormSubmit} /> */}
-      <Sorting />
+
       {manipulateState.map(person => {
         return <EmployeeCard
           key={person.email}
@@ -111,6 +119,7 @@ function Pages() {
           Contact={person.phone}
         />
       })}
+
       {/* <EmployeeCard
       name={Employee[0].name}
       email={Employee[0].email}
